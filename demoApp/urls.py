@@ -8,4 +8,5 @@ urlpatterns = [
     path('add',views.add,name='add'),
     path('AllProfile',views.AllProfile,name='AllProfile'),
     path('append_page',views.append_page,name='append_page'),
+    path('javascript',views.javascript,name='javascript'),
 ]

@@ -1,0 +1,75 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS</title>
+    
+</head>
+<body>
+<a href='{% url 'jquery' %}'>JQUERY</a>
+<a href='{% url 'basic_jquery' %}'>Basic JQUERY Page</a>
+<a href='{% url 'javascript' %}'>JS Page</a>
+<h3>Java Script Code Started Here...</h3>
+<p id='p'>Data</p>
+
+<form name="form" action='' onsubmit='return validateForm()'>
+  First name: <input type="text" name="fname"><br>
+  <input type="button" value="Submit" >
+  {% comment %} // onClick="return validateForm()"" {% endcomment %}
+</form>
+
+
+<script>
+    function validateForm(){
+        //console.log('Function')
+        let x = document.forms['form']['fname'].value;
+        //console.log(x)
+        document.getElementById('p').innerHTML = x
+        y = 'sajid'
+        if(x=='majid')
+        {
+            alert('Name is Already in Data')
+            document.getElementById('p').innerHTML = y
+        }
+        else
+        {
+            document.getElementById('p').innerHTML = y
+        }
+    }
+</script>
+
+<script>
+    //   let a = 5
+    //   const b =a+10 
+    
+    //  JavaScript O/P using 4 Ways
+    //  console.log(8+5);
+    //  alert(a+b);
+    //  document.getElementById('p').innerHTML = 5+6
+    //  document.write('Hello') 
+    
+    {% comment %} let x = 10.2
+    const y = 5.3
+    var $ = 'majid'
+    var $
+    console.log($)
+    document.getElementById('p').innerHTML = "Majid"+" "+"Mansuri" {% endcomment %}
+    {% comment %} let x = 10
+    x += 15
+    console.log(x) {% endcomment %}
+
+    {% comment %} const list = ['majid','mansuri','shubham','bhavsar']
+    const l = list.length
+    for(var i=0;i<l;i++)
+        console.log(list[i])
+        document.write(list[i]) {% endcomment %}
+
+    {% comment %} document.getElementById('lname') {% endcomment %}
+</script>
+
+    
+</body>
+</html>

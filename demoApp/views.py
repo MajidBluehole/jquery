@@ -10,6 +10,8 @@ default = {
 def index(request):
     return render(request, 'index.html')
 
+def javascript(request):
+    return render(request, 'javascript.html')
 
 def basic_jquery(request):
     return render(request, 'basic_jquery.html')
