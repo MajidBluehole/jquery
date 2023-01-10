@@ -17,6 +17,7 @@
 
 <form name="form" action='' onsubmit='return validateForm()'>
   First name: <input type="text" name="fname"><br>
+  Second name: <input type="text" name="sname"><br>
   <input type="button" value="Submit" >
   {% comment %} // onClick="return validateForm()"" {% endcomment %}
 </form>
@@ -26,17 +27,17 @@
     function validateForm(){
         //console.log('Function')
         let x = document.forms['form']['fname'].value;
+        let y = document.forms['form']['sname'].value;
         //console.log(x)
-        document.getElementById('p').innerHTML = x
-        y = 'sajid'
-        if(x=='majid')
+        //document.getElementById('p').innerHTML = x
+        if(x='' || y='')
         {
-            alert('Name is Already in Data')
-            document.getElementById('p').innerHTML = y
+            alert('First Name is Required')
         }
         else
         {
-            document.getElementById('p').innerHTML = y
+            document.getElementById('p').innerHTML = x
+            alert('Fields are is Required')
         }
     }
 </script>
