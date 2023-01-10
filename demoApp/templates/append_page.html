@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#btn').click(function(name,lname,email){
+        $("tbody").append("<tr><td>Majid</td><td>Mansuri</td><td>majid@gmail.com</td></tr>");
+    });
+})
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+  
+<form class="navbar-form navbar-right" >
+    <div class="form-group input-group">
+        <input type="text" class="form-control" placeholder="Search..."/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+    </div>
+</form>
+
+<form class="navbar-form navbar-right" >
+        {% comment %} <input type="text" name="fname" class="form-control" placeholder="First Name"/>
+        <input type="text" name="lname" class="form-control" placeholder="Last Name"/>
+        <input type="email" name="email" class="form-control" placeholder="Email"/>
+        <br/><br/> {% endcomment %}
+    
+    <span class="input-group-btn">
+        {% comment %} <button id='btn' type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button> {% endcomment %}
+    </span>
+</form>
+<button id="btn">Append text</button>
+<table>
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+       
+    </tbody>
+  </table>
+<a></a>
+</body>
+</html>
