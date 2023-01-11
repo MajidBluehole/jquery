@@ -20,6 +20,9 @@ def basic_jquery(request):
 def append_page(request):
     return render(request, 'append_page.html')
 
+def jquery_pagination(request):
+    return render(request, 'jquery_pagination.html')
+
 
 def jquery(request):
     AllProfile()

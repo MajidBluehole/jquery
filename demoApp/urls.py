@@ -9,4 +9,6 @@ urlpatterns = [
     path('AllProfile',views.AllProfile,name='AllProfile'),
     path('append_page',views.append_page,name='append_page'),
     path('javascript',views.javascript,name='javascript'),
+    path('jquery_pagination',views.jquery_pagination,name='jquery_pagination'),
+
 ]
